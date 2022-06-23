@@ -9,23 +9,21 @@ import {
 
 import { authentication } from './Firebase/Firebase-config';
 import { db } from './Firebase/Firebase-config';
-import { collection, getDocs } from 'firebase/firestore/lite';
+import { collection, getDocs } from "firebase/firestore/lite";
 
 
 const App = () => {
 
   const GetData = async ()=>{
-    const citiesCol = collection(db, 'cities');
-    const citySnapshot = await getDocs(citiesCol);
-    const cityList = citySnapshot.docs.map(doc => doc.data());
+    //const citiesCol = collection(db, 'cities');
 
-    console.log(cityList);
+    
   }
 
   return (
 
       <View style={styles.MainContainer}>
-        <Button title='Getdata' onPress={GetData} />
+        <Button title='Getdata' onPress={GetData}/>
       </View>
   
   );
